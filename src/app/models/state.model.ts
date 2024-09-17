@@ -17,9 +17,9 @@ export class State<T, V> {
 }
 
 class StateBuilder<T, V> {
-   status: StatusNotification = 'INIT';
-   value?: T;
-   error?: V;
+  private status: StatusNotification = 'INIT';
+  private value?: T;
+  private error?: V;
 
   public forError(error: any): StateBuilder<T, V> {
     this.error = error;
