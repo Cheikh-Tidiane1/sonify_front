@@ -4,11 +4,12 @@ import {fontAwesomeIcons} from "./shared/font-awesome-icons";
 import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 import {NavigationComponent} from "./components/navigation/navigation.component";
 import { LibraryComponent } from "./components/library/library.component";
+import { HeaderComponent } from "./components/header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule, NavigationComponent, LibraryComponent],
+  imports: [RouterOutlet, FontAwesomeModule, NavigationComponent, LibraryComponent, HeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

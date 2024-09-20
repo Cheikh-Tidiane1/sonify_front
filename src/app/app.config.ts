@@ -1,6 +1,6 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
 import { provideRouter } from '@angular/router';
-import {provideHttpClient, withInterceptors, withXsrfConfiguration} from "@angular/common/http";
+import {provideHttpClient, withXsrfConfiguration} from "@angular/common/http";
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {

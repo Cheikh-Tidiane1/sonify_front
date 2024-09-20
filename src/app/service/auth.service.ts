@@ -2,26 +2,24 @@ import { Location } from '@angular/common';
 import {
   HttpClient,
   HttpErrorResponse,
-  HttpResponse,
   HttpStatusCode,
 } from '@angular/common/http';
 import {
   computed,
   inject,
-  Inject,
   Injectable,
   signal,
   WritableSignal,
 } from '@angular/core';
 import { State } from '../models/state.model';
-import { User } from '../models/user.model';
 import { environment } from '../../environments/environment.development';
+import { User } from '../models/user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  http: HttpClient = Inject(HttpClient);
+  http: HttpClient = inject(HttpClient);
 
   location: Location = inject(Location);
 

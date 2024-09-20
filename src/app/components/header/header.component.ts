@@ -12,19 +12,22 @@ import { Location } from '@angular/common';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
-  authService: AuthService = inject(AuthService);
-  connectedUser: User = { email: this.authService.notConnected };
-  location: Location = inject(Location);
+  authService = inject(AuthService);
+
+  connectedUser: User = {email: this.authService.notConnected};
+
+  location = inject(Location);
+
 
   constructor() {
     effect(() => {
-      if (this.authService.fetchUser().status == 'OK') {
+      if (this.authService.fetchUser().status == "OK") {
         this.connectedUser = this.authService.fetchUser().value!;
       }
     });
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.authService.fetch();
   }
 
