@@ -5,6 +5,7 @@ import {FaIconLibrary, FontAwesomeModule} from "@fortawesome/angular-fontawesome
 import {NavigationComponent} from "./components/navigation/navigation.component";
 import { LibraryComponent } from "./components/library/library.component";
 import { HeaderComponent } from "./components/header/header.component";
+import { ToastService } from './service/toast.service';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,8 @@ export class AppComponent implements OnInit{
   title = 'sonify';
   private faIconLibrary : FaIconLibrary = inject(FaIconLibrary);
 
+  toastService: ToastService = inject(ToastService) ;
+  
   ngOnInit(): void {
     this.initFontAwesome();
   }
