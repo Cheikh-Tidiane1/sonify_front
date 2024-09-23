@@ -6,11 +6,18 @@ import {NavigationComponent} from "./components/navigation/navigation.component"
 import { LibraryComponent } from "./components/library/library.component";
 import { HeaderComponent } from "./components/header/header.component";
 import { ToastService } from './service/toast.service';
-
+import {NgbToast} from "@ng-bootstrap/ng-bootstrap";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule, NavigationComponent, LibraryComponent, HeaderComponent],
+  imports: [
+  RouterOutlet, 
+  FontAwesomeModule, 
+  NavigationComponent, 
+  LibraryComponent, 
+  HeaderComponent,
+  NgbToast
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,6 +29,7 @@ export class AppComponent implements OnInit{
   
   ngOnInit(): void {
     this.initFontAwesome();
+    // this.toastService.show('hello toast','SUCCESS');
   }
 
   private initFontAwesome() {
