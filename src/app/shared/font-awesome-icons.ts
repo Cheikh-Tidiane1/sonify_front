@@ -8,6 +8,8 @@ import {
   faUser,
   faChevronLeft,
   faChevronRight,
+  faCircleNotch,
+  faCircleXmark
 } from '@fortawesome/free-solid-svg-icons';
 
 export const fontAwesomeIcons: IconDefinition[] = [
@@ -19,4 +21,6 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faChevronLeft,
   faChevronRight,
   faUser,
+  faCircleNotch,
+  faCircleXmark,
 ];

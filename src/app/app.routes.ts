@@ -1,3 +1,10 @@
 import { Routes } from '@angular/router';
+import { AddSongComponent } from './components/add-song/add-song.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: 'add-song',
+    component: AddSongComponent,
+    title: 'add-song 🎵',
+  },
+];
