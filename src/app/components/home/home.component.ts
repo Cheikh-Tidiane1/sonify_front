@@ -1,4 +1,4 @@
-import { Component, effect, inject} from '@angular/core';
+import { Component, effect, inject, OnInit} from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SongCardComponent } from './song-card/song-card.component';
 import { SongService } from '../../service/song.service';
@@ -12,7 +12,7 @@ import { ToastService } from '../../service/toast.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent{
+export class HomeComponent implements OnInit{
 
   private songService = inject(SongService);
   private toastService = inject(ToastService);
@@ -28,5 +28,8 @@ export class HomeComponent{
         this.toastService.show('An error occured when fetching all songs', "DANGER");
       }
     });
+  }
+  ngOnInit(){
+    this.songService.getAll();
   }
 }
