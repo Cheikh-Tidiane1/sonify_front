@@ -19,3 +19,10 @@ export interface SaveSong extends SongBase {
   coverContentType?: string;
 }
 
+export interface ReadSong extends SongBase {
+  cover?: string;
+  coverContentType?: string;
+  favorite: boolean;
+  displayPlay: boolean;
+}
+
