@@ -6,7 +6,7 @@
     <h5 class="title mt-3">{{ songDisplay.title?.value }}</h5>
     <p class="author">{{ songDisplay.author?.value }}</p>
   </div>
-  @if (songDisplay.displayPlay) {
+  @if (songDisplay.display) {
     <div class="play position-absolute d-flex align-items-center" [@inOutAnimation]>
       <fa-icon class="text-primary" [icon]="'circle-play'"></fa-icon>
     </div>

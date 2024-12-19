@@ -30,14 +30,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 export class SongCardComponent implements OnInit {
 
   song = input.required<ReadSong>();
-  songDisplay: ReadSong = { favorite: false, displayPlay: false };
+  songDisplay: ReadSong = { favorite: false, display: false };
 
   ngOnInit(): void {
     this.songDisplay = this.song();
   }
 
   onHoverPlay(displayIcon: boolean): void {
-    this.songDisplay.displayPlay = displayIcon;
+    this.songDisplay.display = displayIcon;
   }
 
 }

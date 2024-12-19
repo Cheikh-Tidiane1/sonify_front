@@ -23,6 +23,11 @@ export interface ReadSong extends SongBase {
   cover?: string;
   coverContentType?: string;
   favorite: boolean;
-  displayPlay: boolean;
+  display: boolean;
+}
+
+export interface SongContent extends ReadSong{
+  files?: string,
+  fileContentType?: string
 }
 
